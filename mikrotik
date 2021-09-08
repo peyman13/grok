@@ -1,0 +1,8 @@
+## Mikrotik pptp,ppp,info,account
+%{GREEDYDATA:date} %{GREEDYDATA:type} pptp,ppp,info,account %{GREEDYDATA:user} logged in, %{IP:obtain_ip} from %{IP:src_ip}
+## Mikrotik DNS
+%{GREEDYDATA:date} %{GREEDYDATA:type} query from %{IP:src_ip}: #%{INT:query_id} %{GREEDYDATA:query}
+## Mikrotik Firewall FW-SSH-blacklist
+%{GREEDYDATA:date} %{GREEDYDATA:type} %{GREEDYDATA:point} FW-SSH-blacklist -- input: in:%{GREEDYDATA:vlan} - %{GREEDYDATA:netType} out:\(unknown 0\), src-mac %{GREEDYDATA:src-mac}, proto %{GREEDYDATA:proto} \(%{GREEDYDATA:type_proto}\), %{IP:src_ip}:%{INT:src_port}->%{IP:dst_ip}:%{INT:dst_port}, %{GREEDYDATA:len}
+## Mikrotik IPSec
+%{GREEDYDATA:date} %{GREEDYDATA:type} ipsec,error phase1 negotiation failed due to time up %{IP:src_ip}\[500]<=>%{IP:des_ip}\[500]
