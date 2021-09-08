@@ -6,3 +6,5 @@
 %{GREEDYDATA:date} %{GREEDYDATA:type} %{GREEDYDATA:point} FW-SSH-blacklist -- input: in:%{GREEDYDATA:vlan} - %{GREEDYDATA:netType} out:\(unknown 0\), src-mac %{GREEDYDATA:src-mac}, proto %{GREEDYDATA:proto} \(%{GREEDYDATA:type_proto}\), %{IP:src_ip}:%{INT:src_port}->%{IP:dst_ip}:%{INT:dst_port}, %{GREEDYDATA:len}
 ## Mikrotik IPSec
 %{GREEDYDATA:date} %{GREEDYDATA:type} ipsec,error phase1 negotiation failed due to time up %{IP:src_ip}\[500]<=>%{IP:des_ip}\[500]
+## Mikrotik Firewall Input
+%{GREEDYDATA:date} gateway firewall,info input: %{GREEDYDATA:vlan} - Internet %{GREEDYDATA:out}, src-mac %{GREEDYDATA:mac}, proto %{GREEDYDATA:proto} \(%{GREEDYDATA:handshake}\), %{IP:src_ip}:%{INT:src_port}->%{IP:dst_ip}:%{INT:dst_port}, %{GREEDYDATA:len}
