@@ -14,5 +14,3 @@
 %{GREEDYDATA:date} gateway firewall,info %{GREEDYDATA:point}: %{GREEDYDATA:vlan} - Internet %{GREEDYDATA:out}, src-mac %{GREEDYDATA:mac}, proto %{GREEDYDATA:proto}, %{IP:src_ip}:%{INT:src_port}->%{IP:dst_ip}:%{INT:dst_port}, %{GREEDYDATA:len}
 ## Mikrotik Firewall Loggin_Protocols_Brouteforce_Bl
 {GREEDYDATA:date} gateway firewall,info %{GREEDYDATA:point}: %{GREEDYDATA:vlan} - Internet %{GREEDYDATA:out}, src-mac%{GREEDYDATA:mac}, proto %{GREEDYDATA:proto} \(%{GREEDYDATA:handshake}\), %{IP:src_ip}:%{INT:src_port}->%{IP:dst_ip}:%{INT:dst_port},%{GREEDYDATA:len}
-## Mikrotik Firewall Dstnat (UDP)
-%{GREEDYDATA:date} gateway firewall,info %{GREEDYDATA:point}: %{GREEDYDATA:vlan} - Internet %{GREEDYDATA:out}, src-mac%{GREEDYDATA:mac}, proto %{GREEDYDATA:proto}, %{IP:src_ip}:%{INT:src_port}->%{IP:dst_ip}:%{INT:dst_port}, %{GREEDYDATA:len}
